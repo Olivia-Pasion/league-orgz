@@ -12,7 +12,7 @@ export async function getTeamsWithPlayers() {
                 name
             )
         `);
-    return response;
+    return response.data;
 }
 
 export async function getTeams() {
@@ -23,7 +23,7 @@ export async function getTeams() {
             name
         `);
     
-    return response;
+    return response.data;
 }
 
 export async function getPlayers() {
@@ -40,10 +40,11 @@ export async function getPlayers() {
         `)
         .order('created_at', { ascending: false });
 
-    return response;
+    return response.data;
 }
 
 export async function addPlayer(playerName, teamId) {
+    
     const response = await client
         .from('players')
         .insert({
@@ -52,14 +53,14 @@ export async function addPlayer(playerName, teamId) {
         })
         .single();
     
-    const data = response;
+    const data = response.data;
 
     if (data) {
         data.teamId = data.team_id;
-        data.created = data.created_at;
+        data.playerName = data.name;
     }
 
-    return data;
+    return response.data;
 }
 
 export async function removePlayer(playerId) {
@@ -69,5 +70,5 @@ export async function removePlayer(playerId) {
         .eq('id', playerId)
         .single();
     
-    return response;
+    return response.data;
 }
