@@ -54,7 +54,6 @@ export async function addPlayer(playerName, teamId) {
         .single();
     
     const data = response.data;
-
     if (data) {
         data.teamId = data.team_id;
         data.playerName = data.name;

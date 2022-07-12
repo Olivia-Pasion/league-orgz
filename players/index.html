@@ -13,36 +13,32 @@
         <link rel="stylesheet" href="../styles/reset.css" />
         <link rel="stylesheet" href="../styles/main.css" />
         <link rel="stylesheet" href="../styles/home.css" />
-        <title>Teams</title>
+        <title>Borg Drones</title>
     </head>
 
     <body>
 
         <header>
-            <img src="../assets/html_css_js.png">
-            <h1>Players</h1>
+            <h1>Borg Collective</h1>
             <a href="../">
-                <h1>Teams</h1>
+                <h2>Subdivisions</h2>
             </a>
+            <h2>Drones</h2>
             <div id="user"></div>
         </header>
 
         <main>
             <form id="add-player">
-                <input name="name">
-                <select name="teamId" required>
-                    <option value="1" >Wombats</option></option>
-                    <option value="2">Barracudas</option>
-                    <option value="3">Snakes</option>
-                </select>
+                <input name="name" required>
+                <select name="teamId" required></select>
                 <button>add</button>
             </form>
 
             <table>
                 <thead class="heading">
                     <tr>
-                        <td>Player</td>
-                        <td>Team</td>
+                        <td>Collective</td>
+                        <td>Subdivision</td>
                     </tr>
                 </thead>
                 <tbody id="players">

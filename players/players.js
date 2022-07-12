@@ -29,7 +29,7 @@ async function handleSignOut() {
 async function handleAddPlayer(playerName, teamId) {
     
     const player = await addPlayer(playerName, teamId);
-    
+    console.log(player);
     const team = findById(teams, player.teamId);
     player.teamId = team;
 
