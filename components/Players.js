@@ -15,7 +15,7 @@ export default function createPlayers(tbody) {
 function Player({ player }) {
     const tr = document.createElement('tr');
     tr.classList.add('player');
-
+    
     const name = document.createElement('td');
     const p = document.createElement('p');
     p.textContent = player.name;
@@ -24,8 +24,7 @@ function Player({ player }) {
     
     const team = document.createElement('td');
     team.textContent = player.teamId.name;
-    console.log(team);
-    
+
     tr.append(name, team);
 
     return tr;

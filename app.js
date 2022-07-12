@@ -9,6 +9,7 @@ import createTeams from './components/Teams.js';
 let user = null;
 let teams = [];
 
+
 // Action Handlers
 async function handlePageLoad() {
     user = getUser();
@@ -29,15 +30,15 @@ async function handleAddPlayer(playerName, teamId) {
 
     const team = findById(teams, teamId);
     team.players.push(player);
-    console.log(team);
+    
     display();
 }
 
 async function handleRemovePlayer(player) {
     await removePlayer(player.id);
 
-    const team = findById(teams, player.team);
-
+    const team = findById(teams, player.teamId);
+    console.log(team);
     const index = team.players.indexOf(player);
 
     if (index !== -1) {
