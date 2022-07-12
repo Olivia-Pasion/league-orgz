@@ -38,7 +38,7 @@ async function handleRemovePlayer(player) {
     await removePlayer(player.id);
 
     const team = findById(teams, player.teamId);
-    console.log(team);
+    
     const index = team.players.indexOf(player);
 
     if (index !== -1) {
