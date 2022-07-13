@@ -49,7 +49,7 @@ function Player({ player, handleRemovePlayer }) {
 
     const button = document.createElement('button');
     button.classList.add('delete');
-    button.textContent = 'X';
+    button.textContent = 'DISCONNECT DRONE';
 
     button.addEventListener('click', () =>{
         handleRemovePlayer(player);
@@ -66,11 +66,11 @@ function AddForm({ team, handleAddPlayer }) {
 
     const input = document.createElement('input');
     input.required = true;
-    input.title = `Add new player to ${team.name}`;
-    input.placeholder = 'player name';
+    input.title = `Add new drone to ${team.name}`;
+    input.placeholder = 'Drone Designation';
 
     const button = document.createElement('button');
-    button.textContent = '+';
+    button.textContent = 'Assimilate';
 
     form.append(input, button);
 
