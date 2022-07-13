@@ -1,0 +1,81 @@
+*{
+    --dark-olive-green: #606c38ff;
+    --kombu-green: #283618ff;
+    --timberwolf: #dad7cdff;
+    --laurel-green: #a3b18aff;
+    --fern-green: #588157ff;
+    --hunter-green: #3a5a40ff;
+    --brunswick-green: #344e41ff;
+    --pale-spring-bud: #ccd5aeff;
+    --pale-spring-bud-2: #e9edc9ff;
+    --cornsilk: #fefae0ff;
+}
+
+/* page 1 */
+
+#teams {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#teams li {
+    background-color: var(--kombu-green);
+    color: var(--fern-green);
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 25px;
+    margin: 15px;
+    
+}
+
+#teams .players {
+    height: 250px;
+    width: 250px;
+    overflow : scroll;
+}
+
+#teams .player {
+    background-color: var(--laurel-green);
+    color: black;
+    padding: 20px;
+
+    display:flex;
+    flex-direction: column;
+    align-items:center;    
+}
+
+#teams form input {
+    margin: 20px 10px 0 0;
+    
+    padding: 5px;
+}
+
+#teams form button {
+    margin: 20px 0 0 10px;
+    padding: 5px;
+}
+
+button {
+    background-color: var(--dark-olive-green);
+    color: white;
+    width: 120px;
+   
+}
+
+/* page 2 */
+
+table {
+    background-color: var(--kombu-green);
+    
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
